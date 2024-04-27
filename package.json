@@ -13,7 +13,6 @@
     "@fullcalendar/daygrid": "^6.1.11",
     "@fullcalendar/list": "^6.1.11",
     "@fullcalendar/timegrid": "^6.1.11",
-    "@fullcalendar/vue": "^6.1.11",
     "@fullcalendar/vue3": "^6.1.11",
     "@popperjs/core": "^2.11.8",
     "alpinejs": "^3.13.8",
