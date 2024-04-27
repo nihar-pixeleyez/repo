@@ -3,6 +3,7 @@ import NavBar from "@/components/nav-bar.vue";
 import Menu from "../components/menu.vue";
 import Footer from "../components/footer.vue";
 import rtlLtr from "../components/rtlLtr.vue";
+document.body.classList.add("dark")
 </script>
 <template>
   <div class="bg-[#f9fbfd] dark:bg-dark text-black">
