@@ -51,7 +51,7 @@ watch(() => props.initialOpenIndex, (newValue) => {
                 <button type="button" :class="[buttonClass, openIndex === index ? activeClass : '']" @click="toggleAccordion(index)">
                     <div v-if="item.icon" class="size-5 ltr:mr-2 rtl:ml-2 shrink-0">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="size-5">
-                            <path fill='currentColor' :d="item.icon"></path>
+                            <path fill='currentColor' :d="item.icon"></path>000
                         </svg>
                         <!-- {{ item.icon }} Render item.icon here -->
                     </div>

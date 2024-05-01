@@ -10,16 +10,19 @@
           </h2>
           <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
             <div v-for="slide in slides" :key="slide.src">
-              <button @click="openLightbox(slide)">
+              <button @click="showMultiple">
                 <img :src="slide.src" :alt="slide.alt" class="rounded-xl" />
               </button>
-              <VueEasyLightbox :visible="visible" @close="visible = false">
-                <template #slides>
-                  <img :src="slide.src" :alt="slide.alt" class="rounded-xl" @click="openLightbox(slide)" />
-                </template>
-              </VueEasyLightbox>
             </div>
           </div>
+          <VueEasyLightbox :visible="visible" @hide="onHide" :imgs="imgsRef" :index="indexRef">
+            <template #slides>
+              <div v-for="slide in slides" :key="slide">
+                {{ slide.src }}
+                <img :src="slide.src" :alt="slide.alt" class="rounded-xl" @click="openLightbox(slide)" />
+              </div>
+            </template>
+          </VueEasyLightbox>
         </div>
       </div>
     </div>
@@ -40,7 +43,8 @@ import images5 from '@/assets/images/images-5.jpg';
 import images6 from '@/assets/images/images-6.jpg';
 
 const title = "Lightbox";
-
+const indexRef = ref(0); // default 0
+const imgsRef = ref([]);
 const slides = ref([
   { src: images1, alt: "img 1 to 6" },
   { src: images2, alt: "img 1 to 6" },
@@ -48,14 +52,24 @@ const slides = ref([
   { src: images4, alt: "img 1 to 6" },
   { src: images5, alt: "img 1 to 6" },
   { src: images6, alt: "img 1 to 6" },
-  // Add more images as needed
 ]);
 
 const visible = ref(false); // Assuming you want the lightbox to be initially hidden
+const onShow = () => {
+  visible.value = true
+}
+const showMultiple = () => {
+  imgsRef.value = [
+    images1, images2, images3, images4, images5, images6,
+  ];
+  indexRef.value = 0 // index of imgList
+  onShow()
+};
 
 const openLightbox = (slide) => {
   visible.value = true;
   // You can also set the current slide in the lightbox here
 };
 
+const onHide = () => (visible.value = false);
 </script>

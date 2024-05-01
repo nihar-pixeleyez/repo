@@ -31,6 +31,11 @@ const handleSlideChange = (swiper) => {
     swiper.update();
 };
 </script>
+<style>
+.swiper-button-prev ,.swiper-button-next {
+    color : #fff;
+}
+</style>
 <template>
     <Layout>
         <headTitle title="Carousel" items="Components" />
@@ -67,8 +72,8 @@ const handleSlideChange = (swiper) => {
                             Basic Carousel With Arrow
                         </h2>
                         <Swiper class="swiper SwiperwithArrows" dir="ltr" :slides-per-view="1" :modules="[Navigation]" :navigation="{
-                            nextEl: '.swiper-button-next',
-                            prevEl: '.swiper-button-prev'
+    nextEl: '.text-white .swiper-button-next',
+    prevEl: '.text-white .swiper-button-prev '
                         }">
                             <SwiperSlide>
                                 <img :src="img6" alt="slider" class="object-cover w-full max-h-96" />
@@ -94,7 +99,7 @@ const handleSlideChange = (swiper) => {
                         <h2 class="mb-4 text-base font-semibold text-black capitalize dark:text-white/80">
                             Basic Carousel With pagination
                         </h2>
-                        <Swiper class="swiper SwiperwithArrows" dir="ltr" :slides-per-view="1" :modules="[Pagination]" :pagination="{ clickable: true }">
+                        <Swiper class="swiper SwiperwithArrows" dir="ltr" :slides-per-view="1" :modules="[Pagination]"  :pagination="{ clickable: true }">
                             <SwiperSlide>
                                 <img :src="img5" alt="slider" class="object-cover w-full max-h-96" />
                             </SwiperSlide>
@@ -117,7 +122,7 @@ const handleSlideChange = (swiper) => {
                         <h2 class="mb-4 text-base font-semibold text-black capitalize dark:text-white/80">
                             Basic Carousel With Progress
                         </h2>
-                        <Swiper class="swiper SwiperwithProgress" dir="ltr" :slides-per-view="1" :modules="[Navigation,Pagination]" :navigation="true" :pagination="{ clickable: true }" @slideChange="handleSlideChange">
+                        <Swiper class="swiper SwiperwithProgress" dir="ltr" :slides-per-view="1" :modules="[Navigation]" :navigation="true" :pagination="{ clickable: true }" @slideChange="handleSlideChange">
                             <div class="swiper-pagination swiper-pagination-progressbar swiper-pagination-horizontal">
                                 <span class="swiper-pagination-progressbar-fill" :style="{
                                     transform: 'translate3d(0px, 0px, 0px) scaleX(' + scaleValue + ') scaleY(1)',

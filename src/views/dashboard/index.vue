@@ -76,7 +76,7 @@ const dropdownItems = ["Weekly", "Monthly", "Yearly"];
                         </div>
                     </div>
                     <div>
-                        <apexchart type="area" height="310" :options="userChartOptions" :series="userChartOptions.series"></apexchart>
+                        <apexchart type="area" height="300" :options="userChartOptions" :series="userChartOptions.series"></apexchart>
                     </div>
                 </div>
                 <div class="p-5 bg-white border rounded border-black/10 dark:bg-darklight dark:border-darkborder">
@@ -170,7 +170,7 @@ const dropdownItems = ["Weekly", "Monthly", "Yearly"];
                 </div>
                 <div class="gap-6 p-5 bg-white border rounded dark:bg-darklight dark:border-darkborder border-black/10">
                     <h2 class="mb-4 text-base font-semibold text-black capitalize dark:text-white/80">Users by Device</h2>
-                    <apexchart type="radialBar" height="310" :options="usersByDevice" :series="usersByDevice.series"></apexchart>
+                    <apexchart type="radialBar" height="300" :options="usersByDevice" :series="usersByDevice.series"></apexchart>
 
                 </div>
             </div>

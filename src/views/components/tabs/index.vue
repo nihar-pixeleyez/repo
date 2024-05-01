@@ -83,7 +83,7 @@ const handleBarTabClickd = (tab) => {
     <Layout>
         <headTitle title="Tabs" items="Components" />
 
-        <div class="flex flex-col gap-4 min-h-[calc(100vh-212px)]">
+        <div class="flex flex-col gap-4 min-h-[calc(100vh-212px)] dark:text-darkmuted">
             <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
                 <!-- Default -->
                 <div class="p-5 bg-white border rounded border-black/10 dark:bg-darklight dark:border-darkborder">

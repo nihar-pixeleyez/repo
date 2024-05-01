@@ -221,8 +221,5 @@ const [isBorder, handleBorderClose] = useAlertState(alertdata);
 const [isIcon, handleIconClose] = useAlertState(alertdata);
 const [isContent, handleContentClose] = useAlertState(alertdata);
 const [isExample, handleExampleClose] = useAlertState(alertdata);
-// Define props if needed
-// const props = defineProps({
-//     // Define props here
-// });
+
 </script>

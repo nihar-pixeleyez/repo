@@ -1006,7 +1006,7 @@ select {
   gap: 1rem;
 }
 
-:is(:root ) .fc {
+:is(:root ) .dark  .fc {
   --fc-border-color: #343331;
 }
 

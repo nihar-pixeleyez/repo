@@ -2,7 +2,7 @@
     <Layout>
         <div>
             <headTitle title="Calendar" items="Apps"/>
-            <FullCalendar :options="calendarOptions" />
+            <FullCalendar class="pt-4" :options="calendarOptions" />
         </div>
     </Layout>
 </template>

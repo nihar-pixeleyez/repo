@@ -45,51 +45,39 @@
                         Position Notification
                     </h2>
                     <div class="flex flex-wrap items-center gap-4">
-                        <div v-if="toast1">
-                            <div class="bg-black text-white py-3 px-4 rounded-md max-w-[220px] fixed top-5 ltr:left-5 rtl:right-5 z-[99999]">
-                                <span>Hello, world! This is a toast message.</span>
-                            </div>
+                        <div v-if="toast1" class="bg-black text-white py-3 px-4 rounded-md max-w-[220px] fixed top-5 ltr:left-5 rtl:right-5 z-[99999]">
+                            <span>Hello, world! This is a toast message.</span>
                         </div>
                         <button class="text-black transition-all duration-300 border rounded-md btn dark:text-white dark:hover:text-black border-light hover:bg-light hover:text-black" @click="setToast1(!toast1)">
                             Top Left
                         </button>
-                        <div v-if="toast2">
-                            <div class="bg-black text-white py-3 px-4 rounded-md max-w-[220px] mx-auto fixed top-5 left-0 right-0 z-[99999]">
-                                <span>Hello, world! This is a toast message.</span>
-                            </div>
+                        <div v-if="toast2" class="bg-black text-white py-3 px-4 rounded-md max-w-[220px] mx-auto fixed top-5 left-0 right-0 z-[99999]">
+                            <span>Hello, world! This is a toast message.</span>
                         </div>
                         <button class="text-black transition-all duration-300 border rounded-md btn dark:text-white dark:hover:text-black border-light hover:bg-light hover:text-black" @click="setToast2(!toast2)">
                             Top Center
                         </button>
-                        <div v-if="toast3">
-                            <div class="bg-black text-white py-3 px-4 rounded-md max-w-[220px] fixed top-5 ltr:right-5 rtl:left-5 z-[99999]">
-                                <span>Hello, world! This is a toast message.</span>
-                            </div>
+                        <div v-if="toast3" class="bg-black text-white py-3 px-4 rounded-md max-w-[220px] fixed top-5 ltr:right-5 rtl:left-5 z-[99999]">
+                            <span>Hello, world! This is a toast message.</span>
                         </div>
                         <button class="text-black transition-all duration-300 border rounded-md btn dark:text-white dark:hover:text-black border-light hover:bg-light hover:text-black" @click="setToast3(!toast3)">
                             Top Right
                         </button>
-                        <div v-if="toast4">
-                            <div class="bg-black text-white py-3 px-4 rounded-md max-w-[220px] fixed bottom-5 ltr:right-5 rtl:left-5 z-[99999]">
-                                <span>Hello, world! This is a toast message.</span>
-                            </div>
+                        <div v-if="toast4" class="bg-black text-white py-3 px-4 rounded-md max-w-[220px] fixed bottom-5 ltr:right-5 rtl:left-5 z-[99999]">
+                            <span>Hello, world! This is a toast message.</span>
                         </div>
                         <button class="text-black transition-all duration-300 border rounded-md btn dark:text-white dark:hover:text-black border-light hover:bg-light hover:text-black" @click="setToast4(!toast4)">
                             Bottom Right
                         </button>
-                        <div v-if="toast5">
-                            <div class="bg-black text-white py-3 px-4 rounded-md max-w-[220px] mx-auto fixed bottom-5 right-0 left-0 z-[99999]">
-                                <span>Hello, world! This is a toast message.</span>
-                            </div>
+                        <div v-if="toast5" class="bg-black text-white py-3 px-4 rounded-md max-w-[220px] mx-auto fixed bottom-5 right-0 left-0 z-[99999]">
+                            <span>Hello, world! This is a toast message.</span>
                         </div>
                         <button class="text-black transition-all duration-300 border rounded-md btn dark:text-white dark:hover:text-black border-light hover:bg-light hover:text-black" @click="setToast5(!toast5)">
                             Bottom Center
                         </button>
-                        <div v-if="toast6">
-                            <div class="bg-black text-white py-3 px-4 rounded-md max-w-[220px] fixed bottom-5 ltr:left-5 rtl:right-5 z-[99999]">
+                            <div v-if="toast6" class="bg-black text-white py-3 px-4 rounded-md max-w-[220px] fixed bottom-5 ltr:left-5 rtl:right-5 z-[99999]">
                                 <span>Hello, world! This is a toast message.</span>
                             </div>
-                        </div>
                         <button class="text-black transition-all duration-300 border rounded-md btn dark:text-white dark:hover:text-black border-light hover:bg-light hover:text-black" @click="setToast6(!toast6)">
                             Bottom Left
                         </button>
@@ -103,11 +91,11 @@
                     </h2>
                     <div class="flex flex-wrap items-center gap-4">
                         <div v-for="(toast, index) in colorToastStates" :key="index">
-                            <div v-if="toast.value" :class="`bg-${['purple', 'info', 'success', 'warning', 'danger', 'black', 'muted', 'light', 'white'][index]} text-white py-3 px-4 rounded-md max-w-[220px] fixed bottom-5 ltr:right-5 rtl:left-5 z-[99999]`">
+                            <div v-if="toast.value" :class="`bg-${['purple', 'info', 'success', 'warning', 'danger', 'black', 'muted', 'light'][index]} text-white py-3 px-4 rounded-md max-w-[220px] fixed bottom-5 ltr:right-5 rtl:left-5 z-[99999]`">
                                 <span>Hello, world! This is a toast message.</span>
                             </div>
-                            <button :class="`transition-all duration-300 border rounded-md btn text-${['purple', 'info', 'success', 'warning', 'danger', 'black', 'muted', 'light', 'white'][index]} border-${['purple', 'info', 'success', 'warning', 'danger', 'black', 'muted', 'light', 'white'][index]} hover:bg-${['purple', 'info', 'success', 'warning', 'danger', 'black', 'muted', 'light', 'white'][index]} hover:text-white`" @click="toggleColorToastState(index)">
-                                {{ ['Primary', 'Info', 'Success', 'Warning', 'Danger', 'Black', 'Muted', 'Light', 'White'][index] }}
+                            <button :class="`transition-all duration-300 border rounded-md btn text-${['purple', 'info', 'success', 'warning', 'danger', 'black', 'muted', 'light'][index]} border-${['purple', 'info', 'success', 'warning', 'danger', 'black', 'muted', 'light'][index]} hover:bg-${['purple', 'info', 'success', 'warning', 'danger', 'black', 'muted', 'light'][index]} hover:text-white`" @click="toggleColorToastState(index)">
+                                {{ ['Primary', 'Info', 'Success', 'Warning', 'Danger', 'Black', 'Muted', 'Light'][index] }}
                             </button>
                         </div>
                     </div>
@@ -144,18 +132,21 @@ const setToast5 = (value) => { toast5.value = value; };
 const setToast6 = (value) => { toast6.value = value; };
 
 const createToastState = () => ref(false);
-const colorToastStates = Array.from({ length: 9 }, createToastState);
+const colorToastStates = Array.from({ length: 8 }, createToastState);
 
 const toggleColorToastState = (index) => {
     colorToastStates[index].value = !colorToastStates[index].value;
+    if (colorToastStates[index].value) {
+        showColorToast(index);
+    }
 };
 
 const showColorToast = (index) => {
     const toastTimer = setTimeout(() => {
+        console.log("tost " , );
         colorToastStates[index].value = false;
     }, 3000);
-    onUnmounted(() => {
-        clearTimeout(toastTimer);
-    });
+    // Clear the timeout when the toast should be hidden
+    clearTimeout(toastTimer);
 };
 </script>

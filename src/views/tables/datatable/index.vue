@@ -38,7 +38,8 @@ import headTitle from '@/components/head-title.vue';
                                         <div class="flex items-center justify-between gap-2">
                                             <p>Name</p>
                                             <div class="flex flex-col">
-                                                <svg @click="sort('name', 'asc')" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" viewBox="0 0 24 24" stroke="currentColor" class="w-3 h-3 cursor-pointer fill-current text-muted" x-bind:class="{'!text-black': sorted.field === 'name' && sorted.rule === 'asc'}">
+                                                <svg @click="sort('name', 'asc')" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" viewBox="0 0 24 24" stroke="currentColor" class="w-3 h-3 cursor-pointer fill-current text-muted" 
+                                                x-bind:class="{'!text-black': sorted.field === 'name' && sorted.rule === 'asc'}">
                                                     <path d="M5 15l7-7 7 7"></path>
                                                 </svg>
                                                 <svg @click="sort('name', 'desc')" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" viewBox="0 0 24 24" stroke="currentColor" class="w-3 h-3 cursor-pointer fill-current text-muted" x-bind:class="{'!text-black': sorted.field === 'name' && sorted.rule === 'desc'}">

@@ -2,7 +2,7 @@
     <Layout>
         <headTitle title="Typography" items="Elements" />
 
-        <div class="flex flex-col gap-4 min-h-[calc(100vh-212px)]">
+        <div class="flex flex-col gap-4 min-h-[calc(100vh-212px)] dark:text-darkmuted">
             <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
                 <div class="p-5 bg-white border rounded border-black/10 dark:bg-darklight dark:border-darkborder">
                     <h2 class="mb-4 text-base font-semibold text-black capitalize dark:text-white/80">Headings</h2>

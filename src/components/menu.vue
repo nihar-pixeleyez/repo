@@ -28,7 +28,6 @@ watch(activeMenu, (value) => {
   }
 });
 
-// const $route = useRoute();
 </script>
 
 <template>
@@ -69,6 +68,9 @@ watch(activeMenu, (value) => {
                 <li v-for="(subitem, subkey) in item.subItems" :key="subkey">
                   <router-link :to="subitem.link" :class="{ 'active': $route.path === subitem.link }">
                     {{ subitem.label }}
+                    <template v-if="subitem.new">
+                      <span class="inline-block px-2 py-1 text-xs leading-none text-pink-500 rounded bg-pink-500/10 ltr:ml-3 rtl:mr-3">New</span>
+                    </template>
                   </router-link>
                 </li>
               </ul>
@@ -81,6 +83,7 @@ watch(activeMenu, (value) => {
                       <path :d="item.icon" fill="currentColor"></path>
                     </svg>
                     <span class="ltr:pl-1.5 rtl:pr-1.5">{{ item.label }}</span>
+                    <span v-if="item.new === true" class="inline-block px-2 py-1 text-xs leading-none text-pink-500 rounded bg-pink-500/10 ltr:ml-3 rtl:mr-3">New</span>
                   </div>
                 </router-link>
               </li>

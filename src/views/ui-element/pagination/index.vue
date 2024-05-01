@@ -1,6 +1,6 @@
 <template>
     <Layout>
-        <headTitle title="Loader" items="Elements" />
+        <headTitle title="Pagination" items="Elements" />
         <div class="flex flex-col gap-4 min-h-[calc(100vh-212px)]">
             <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
                 <div class="p-5 bg-white border rounded border-black/10 dark:bg-darklight dark:border-darkborder">

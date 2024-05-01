@@ -70,13 +70,13 @@ const dropdownItems = ["Weekly", "Monthly", "Yearly"];
                         <h2 class="text-base font-semibold text-black dark:text-white/80">Static Overview</h2>
                         <div>
                             <div x-data="{ dropdown: false}" class="ml-auto dropdown">
-                                <Dropdown classname="flex items-center justify-center w-6 h-6 text-black transition-all duration-300 rounded sm:w-9 sm:h-9 dark:text-darkmuted dark:hover:text-white dark:hover:bg-white/5 hover:bg-light/50" :linkClass="'btn'" :isSvg='true' :svgName="'M5 10C3.9 10 3 10.9 3 12C3 13.1 3.9 14 5 14C6.1 14 7 13.1 7 12C7 10.9 6.1 10 5 10ZM19 10C17.9 10 17 10.9 17 12C17 13.1 17.9 14 19 14C20.1 14 21 13.1 21 12C21 10.9 20.1 10 19 10ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10Z'" :isIcon='true' :dropdownItems='dropdownItems' />
+                                <Dropdown classname="flex text-black dark:text-white items-center justify-center w-6 h-6 text-black transition-all duration-300 rounded sm:w-9 sm:h-9 dark:text-darkmuted dark:hover:text-white dark:hover:bg-white/5 hover:bg-light/50" :linkClass="'btn'" :isSvg='true' :svgName="'M5 10C3.9 10 3 10.9 3 12C3 13.1 3.9 14 5 14C6.1 14 7 13.1 7 12C7 10.9 6.1 10 5 10ZM19 10C17.9 10 17 10.9 17 12C17 13.1 17.9 14 19 14C20.1 14 21 13.1 21 12C21 10.9 20.1 10 19 10ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10Z'" :isIcon='true' :dropdownItems='dropdownItems' />
 
                             </div>
                         </div>
                     </div>
                     <div>
-                        <apexchart type="bar" height="280" :options="ecommerceChartOptions5" :series="ecommerceChartOptions5.series"></apexchart>
+                        <apexchart type="bar" class="-ml-4" width="790" height="260" :options="ecommerceChartOptions5" :series="ecommerceChartOptions5.series"></apexchart>
                     </div>
                 </div>
                 <div class="p-5 bg-white border rounded border-black/10 dark:bg-darklight dark:border-darkborder">

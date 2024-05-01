@@ -2,17 +2,17 @@
 
 export default [
 
+  
   {
-    path: "/",
-    name: "Index",
+    path: "/index",
+    name: "index",
     meta: {
       title: "Dashboard",
     },
     component: () => import("../views/dashboard/index.vue"),
-  },
-  {
-    path: "/index",
-    name: "index",
+  },{
+    path: "/",
+    name: "Index",
     meta: {
       title: "Dashboard",
     },

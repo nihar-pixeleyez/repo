@@ -1,6 +1,6 @@
 <template>
     <Layout>
-        <headTitle title="Proggress Bar" items="Elements" />
+        <headTitle title="Progress Bar" items="Elements" />
 
         <div class="flex flex-col gap-4 min-h-[calc(100vh-212px)]">
             <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
